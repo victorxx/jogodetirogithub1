@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Metatag Title (Título da Página) -->
+    <title>Galeria de Imagens - Jogos de Tiro</title>
+
+    <!-- Metatag Description (Descrição) -->
+    <meta name="description" content="Galeria de imagens com jogos de tiro clássicos, como Call of Duty, Battlefield, Counter-Strike e outros. Veja uma coleção de imagens dinâmicas e action-packed.">
+
+    <!-- Metatag Keywords (Palavras-chave) -->
+    <meta name="keywords" content="jogos de tiro, Call of Duty, Battlefield, Counter-Strike, jogos de ação, galeria de jogos, FPS, shooters, nostalgia">
+
+    <!-- Metatag Author (Autor da Página) -->
+    <meta name="author" content="Saib">
+
+    <!-- Open Graph (OG) para melhor compartilhamento em redes sociais -->
+    <meta property="og:title" content="Galeria de Imagens - Jogos de Tiro">
+    <meta property="og:description" content="Confira nossa galeria de imagens com jogos de tiro, como Call of Duty, Battlefield, Counter-Strike, e muito mais. Para os fãs de ação e FPS.">
+    <!-- Imagens de jogos para Open Graph -->
+    <meta property="og:image" content="https://example.com/imagem-jogo.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card (Card para Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galeria de Imagens - Jogos de Tiro">
+    <meta name="twitter:description" content="Uma galeria de imagens com jogos de tiro, como Call of Duty, Battlefield, Counter-Strike e outros, ideal para os amantes de ação e FPS.">
+    <meta name="twitter:image" content="https://example.com/imagem-jogo.jpg">
+
+    <!-- Favicon (Ícone da página) -->
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* CSS Retro para a página */
+        body {
+            margin: 0;
+            font-family: 'Press Start 2P', cursive; /* Fonte pixelada */
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Container da galeria */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Estilo da imagem da galeria */
+        .image-item {
+            margin: 10px;
+            border: 3px solid #0ff; /* Bordas estilo neon */
+            max-width: 300px;
+            position: relative;
+            overflow: hidden;
+            background-color: #111; /* Fundo escuro */
+            transition: transform 0.3s ease;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito de zoom nas imagens */
+        .image-item:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Estilo da legenda com fontes pixeladas */
+        .image-item figcaption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #0ff;
+            padding: 5px;
+            font-size: 1rem;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .image-item {
+                max-width: 100%;
+            }
+        }
+
+        /* Estilo para o texto aleatório */
+        .random-text {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        /* Propaganda piscante estilo retro */
+        .popup-ad {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff0000;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            display: none;
+            animation: blink 30s infinite;
+            z-index: 1000;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        /* Efeito de piscamento mais lento */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Estilo do botão de fechar */
+        .popup-ad button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .popup-ad button:hover {
+            background-color: #444;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Galeria de Jogos de Tiro - Call of Duty, Battlefield, Counter-Strike e mais</h1>
+
+    <div class="container" id="gallery">
+        <!-- As imagens serão adicionadas aqui via JavaScript -->
+    </div>
+
+    <!-- Seção para o texto aleatório -->
+    <div class="random-text" id="randomText">
+        <!-- O texto aleatório será gerado aqui -->
+    </div>
+
+    <!-- Propaganda piscante -->
+    <div class="popup-ad" id="popupAd">
+        <button class="close-btn" id="closeAd">X</button>
+        <a href="https://victorxx.github.io/piadagithub01/">VAMOS RIR MELHORES PIADAS</a>
+    </div>
+
+    <script>
+        // Exemplo de URLs de imagens com tema de jogos de tiro
+        const imagens = [
+            {src:"10.webp",link:"https://victorxx.github.io/topicogithub01/randomizador.html"},
+            {src:"8.avif",link:"https://victorxx.github.io/VPSVENDA/contatoroberto.html"},
+            {src:"7.webp",link:"https://geocredibnkvitoria.com/"},
+            {src: "1.jpeg", link: "https://victorxx.github.io/topicogithub01/"},
+            {src:"2.webp",link:"https://victorxx.github.io/topicogithub01/"},
+            {src:"3.jpg",link:"https://victorxx.github.io/VPSVENDA/contatoroberto.html"},
+            {src:"4.jpg",link:"https://victorxx.github.io/redirecionadorlinksgit1/"},
+            {src:"5.jpg",link:"https://victorxx.github.io/redirecionadorlinksgit1/"},
+            {src:"5.jpg",link:"https://victorxx.github.io/redirecionadorlinksgit1/"},
+            {src:"6.jpg",link:"https://victorxx.github.io/redirecionadorlinksgit1/"},
+        
+        ];
+
+        // Função para gerar a galeria dinamicamente
+        function criarGaleria() {
+            const container = document.getElementById('gallery');
+            
+            imagens.forEach(imagem => {
+                const figure = document.createElement('figure');
+                figure.classList.add('image-item');
+
+                const img = document.createElement('img');
+                img.src = imagem.src;
+                img.alt = 'Jogo de Tiro';
+
+                const caption = document.createElement('figcaption');
+                caption.textContent = "Jogo de Tiro - " + imagem.link.split('/')[3].replace('_', ' ');
+
+                const link = document.createElement('a');
+                link.href = imagem.link;
+                link.target = "_blank"; // abrir o link em nova aba
+                link.appendChild(img);
+
+                figure.appendChild(link);
+                figure.appendChild(caption);
+                container.appendChild(figure);
+            });
+        }
+
+        // Função para gerar texto aleatório
+        function gerarTextoAleatorio() {
+            const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let resultado = '';
+            const tamanho = 10; // Tamanho do texto aleatório
+
+            for (let i = 0; i < tamanho; i++) {
+                const indice = Math.floor(Math.random() * caracteres.length);
+                resultado += caracteres[indice];
+            }
+
+            return resultado;
+        }
+
+        // Função para exibir o texto aleatório
+        function mostrarTextoAleatorio() {
+            const randomTextDiv = document.getElementById('randomText');
+            randomTextDiv.textContent = gerarTextoAleatorio();
+        }
+
+        // Função para fechar a propaganda
+        function fecharPropaganda() {
+            const popupAd = document.getElementById('popupAd');
+            popupAd.style.display = 'none';
+        }
+
+        // Chama a função para criar a galeria
+        criarGaleria();
+
+        // Chama a função para mostrar o texto aleatório
+        mostrarTextoAleatorio();
+
+        // Adiciona o evento de fechamento da propaganda
+        document.getElementById('closeAd').addEventListener('click', fecharPropaganda);
+
+        // Exibe a propaganda após 2 segundos
+        setTimeout(() => {
+            document.getElementById('popupAd').style.display = 'block';
+        }, 2000);
+    </script>
+</body>
+</html>
